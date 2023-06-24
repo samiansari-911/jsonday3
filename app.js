@@ -109,60 +109,186 @@
 
 // coonstruction functuion
 
-function Details (name , email , phone , city){
-    this.Name = name,
-    this.Email = email,
-    this.Phone = phone,
-    this.City = city
-}
+// function Details (name , email , phone , city){
+//     this.Name = name,
+//     this.Email = email,
+//     this.Phone = phone,
+//     this.City = city
+// }
 
-let displayDetails1 = new Details("sami" ," sami@gmail.com", "085415535" , "karachi" + "<br>" + "<hr>")
-let displayDetails2 = new Details("saad" ," saad@gmail.com", "085414345" , "lahore" + "<br>" + "<hr>")
+// let displayDetails1 = new Details("sami" ," sami@gmail.com", "085415535" , "karachi" + "<br>" + "<hr>")
+// let displayDetails2 = new Details("saad" ," saad@gmail.com", "085414345" , "lahore" + "<br>" + "<hr>")
 
-console.log(displayDetails1);
-console.log(displayDetails2);
-
-
-
-// coonstruction functuion with for loop
+// console.log(displayDetails1);
+// console.log(displayDetails2);
 
 
-for(let a in displayDetails1){
-    document.write(a+ ':' + displayDetails1[a] + "<br>")
-}
 
-for(let i in displayDetails2){
-    document.write(i+ ':' + displayDetails2[i] + "<br>")
-}
+// // coonstructor functuion with for loop
+
+
+// for(let a in displayDetails1){
+//     document.write(a+ ':' + displayDetails1[a] + "<br>")
+// }
+
+// for(let i in displayDetails2){
+//     document.write(i+ ':' + displayDetails2[i] + "<br>")
+// }
 
 
 // coonstruction functuion with class function
 
 
-class Student {
-    constructor(name , phone ,gender ,email){
-        (this.Name = name),
-        (this.Phone = phone),
-        (this.Gender = gender),
-        (this.Email = email)
+// class Student {
+//     constructor(name , phone ,gender ,email){
+//         (this.Name = name),
+//         (this.Phone = phone),
+//         (this.Gender = gender),
+//         (this.Email = email)
+//     }
+
+// msg(){
+//     console.log("Hello");
+// }
+
+// static greet(){
+//     console.log("Greetings");
+
+// }
+// }
+
+
+// let std = new Student("ali", "35362456","Male" , "ali@gmail,com");
+// std.msg();
+// console.log(std);
+// Student.greet();
+
+
+// for(let a in std){
+//     document.write(a + ":" + std[a] + "<br>"  + "<hr>")
+// }
+
+
+// constructor function with inheritance
+
+// class Parent {
+//     constructor(name , phone ,gender ,email){
+//         (this.Name = name),
+//         (this.Phone = phone),
+//         (this.Gender = gender),
+//         (this.Email = email);
+//     }
+
+//     msg() {
+//         console.log("hello");
+//     }
+//     static greet(){
+//         console.log("Greeting");
+//     }
+// }
+//   class Child extends Parent{
+//     constructor(name,phone,gender,email){
+//         super(name,phone,gender,email)
+//     }
+//   childmsg(){
+//     console.log("abbuuuuu");
+//   }
+//   }
+
+
+//   let parent = new Parent("abdulHAfeez" ,"924643523","Male" , "hafeezansari@gmail.com");
+//   let child = new Child("SamiHAfeez" ,"924643523","Male" , "apsamiullah911@gmail.com");
+// child.msg()
+// child.childmsg()
+// console.log(Parent);
+// console.log(child);
+
+// for( let i in parent){
+//     document.write(i+ ':' +parent[i] +"<br>")
+// }
+
+
+// inheritance object practise
+
+class PTCl {
+    constructor( feature1, feature2){
+        (this.feature1 = feature1),
+        (this.feature2 = feature2)
     }
-msg(){
-    console.log("Hello");
 }
 
-static greet(){
-    console.log("Greetings");
-
+class Mobile extends PTCl{
+    constructor( feature1 , feature2 , feature3){
+       super( feature1 , feature2 , feature3)
+       this.feature3 = feature3
+    }
+       
 }
+
+let parent = new PTCl( "Incoming call", "outcomingcall" );
+
+let child = new  Mobile("game" ," videocall" , "audiocall")
+
+console.log(parent);
+console.log(child);
+
+
+
+// program with scope
+
+
+for ( let a in child){
+    document.write(a+ ":" +child [a] + "<br>")
 }
 
+let age = 34 ;
 
-let std = new Student("ali", "35362456","Male" , "ali@gmail,com");
-std.msg();
-console.log(std);
-Student.greet();
-
-
-for(let a in std){
-    document.write(a + ":" + std[a] + "<br>"  + "<hr>")
+function getAge(){
+let result = age + 2;
+console.log(result)
 }
+
+console.log(age);
+getAge();
+
+function getanotherAge(){
+    let result = result + 5;
+    console.log (result);
+}
+
+getanotherAge()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
